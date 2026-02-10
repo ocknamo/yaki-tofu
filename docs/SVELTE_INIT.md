@@ -158,8 +158,7 @@ npm run test
 TBD
 ```
 
-2. アプリ内の不要なコンポーネントをやファイルを削除
-3. LICENSEファイルをMITで作成する 
+2. LICENSEファイルを ocknamo 名義でMITで作成する
 
 
 ## 最終フィードバック
