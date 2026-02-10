@@ -1,33 +1,115 @@
-# burning-tofu-app
+# Burning Tofu
 
-A Nostr badge creation application implementing NIP-58 (Badges).
+NIP-58 Badge Creation & Award Application
 
-## Overview
+## 概要
 
-This application allows users to create, award, and display Nostr badges according to the NIP-58 specification.
+Burning Tofuは、Nostrプロトコルの[NIP-58](https://github.com/nostr-protocol/nips/blob/master/58.md)に準拠したバッジ作成・付与アプリケーションです。
 
-## Development
+## 機能
+
+- **NIP-07ログイン**: ブラウザ拡張機能を使用した安全なログイン
+- **バッジ定義作成**: kind 30009イベントでバッジを定義
+- **バッジ付与**: kind 8イベントでユーザーにバッジを授与
+- **画像プレビュー**: バッジ画像のプレビューとサイズ検証（推奨: 1024x1024px）
+- **リレー設定**: カスタムリレーの追加・削除
+- **多言語対応**: 日本語・英語の切り替え
+
+## 技術スタック
+
+- **フレームワーク**: Svelte 5 + TypeScript
+- **ビルドツール**: Vite
+- **Nostrライブラリ**: rx-nostr, rx-nostr-crypto
+- **コード品質**: Biome (フォーマット・リント)
+
+## セットアップ
+
+### 前提条件
+
+- Node.js 18以上
+- NIP-07対応のNostr拡張機能（例: nos2x, Alby, etc.）
+
+### インストール
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Run development server
+### 開発サーバー起動
+
+```bash
 npm run dev
+```
 
-# Build for production
+ブラウザで http://localhost:5173/ を開きます。
+
+### ビルド
+
+```bash
 npm run build
+```
 
-# Run tests
-npm run test
+### プレビュー
 
-# Format code
+```bash
+npm run preview
+```
+
+## 使い方
+
+1. **ログイン**: NIP-07拡張機能でログイン
+2. **バッジ作成**: 
+   - バッジID（英数字とハイフン）
+   - バッジ名
+   - 説明
+   - 画像URL
+   を入力して作成
+3. **バッジ付与**: 作成したバッジを選択し、受取人のnpubを入力して付与
+4. **リレー設定**: 必要に応じてカスタムリレーを追加
+
+## デフォルトリレー
+
+開発環境では以下のリレーを使用:
+- wss://yabu.me
+
+## NIP-58について
+
+NIP-58は、Nostrプロトコルでバッジを定義・授与・表示するための仕様です。
+
+- **Badge Definition (kind 30009)**: バッジの定義
+- **Badge Award (kind 8)**: バッジの授与
+- **Profile Badges (kind 30008)**: プロフィールでのバッジ表示
+
+詳細は [NIP-58仕様](https://github.com/nostr-protocol/nips/blob/master/58.md) を参照してください。
+
+## ライセンス
+
+MIT License
+
+## 開発
+
+### コードフォーマット
+
+```bash
 npm run format
+```
 
-# Lint code
+### リント
+
+```bash
 npm run lint
 ```
 
-## License
+### 型チェック
 
-MIT
+```bash
+npm run check
+```
+
+## 貢献
+
+プルリクエストを歓迎します！
+
+## サポート
+
+問題が発生した場合は、GitHubのIssuesで報告してください。
