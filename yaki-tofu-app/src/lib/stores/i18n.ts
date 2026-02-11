@@ -22,8 +22,8 @@ const translations: Translations = {
   
   // Auth
   login: {
-    en: 'Login with NIP-07',
-    ja: 'NIP-07でログイン',
+    en: 'Login by NIP-07',
+    ja: 'ログイン(NIP-07)',
   },
   logout: {
     en: 'Logout',
@@ -190,6 +190,16 @@ const translations: Translations = {
   loginRequired: {
     en: 'Please login first',
     ja: '先にログインしてください',
+  },
+  
+  // Footer
+  viewOnGitHub: {
+    en: 'View on GitHub',
+    ja: 'GitHubで見る',
+  },
+  nip58Spec: {
+    en: 'NIP-58 Specification',
+    ja: 'NIP-58 仕様',
   },
 };
 

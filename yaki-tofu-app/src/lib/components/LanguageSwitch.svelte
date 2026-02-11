@@ -6,17 +6,17 @@
   }
 </script>
 
-<div class="flex gap-2">
+<div class="flex gap-1">
   <button
-    class="px-3 py-1.5 md:px-4 md:py-2 rounded-md text-sm md:text-base transition-colors {$languageStore === 'en' ? 'bg-white text-orange-500 font-medium' : 'bg-orange-400 text-white hover:bg-white hover:text-orange-500'}"
+    class="px-2 py-1 rounded text-xs transition-colors {$languageStore === 'en' ? 'bg-white text-orange-500 font-medium' : 'bg-orange-400 text-white hover:bg-white hover:text-orange-500'}"
     onclick={() => switchLanguage('en')}
   >
     EN
   </button>
   <button
-    class="px-3 py-1.5 md:px-4 md:py-2 rounded-md text-sm md:text-base transition-colors {$languageStore === 'ja' ? 'bg-white text-orange-500 font-medium' : 'bg-orange-400 text-white hover:bg-white hover:text-orange-500'}"
+    class="px-2 py-1 rounded text-xs transition-colors {$languageStore === 'ja' ? 'bg-white text-orange-500 font-medium' : 'bg-orange-400 text-white hover:bg-white hover:text-orange-500'}"
     onclick={() => switchLanguage('ja')}
   >
-    日本語
+    JA
   </button>
 </div>
