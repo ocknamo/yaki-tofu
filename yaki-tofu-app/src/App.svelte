@@ -38,8 +38,8 @@ onMount(() => {
 			class="max-w-7xl mx-auto px-4 py-6 md:py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
 		>
 			<div class="flex-1">
-				<h1 class="text-3xl md:text-4xl font-bold">📛 {$t('appTitle')}</h1>
-				<p class="mt-2 text-sm md:text-base opacity-90">{$t('appDescription')}</p>
+				<h1 class="text-3xl md:text-4xl font-bold text-gray-900">📛 {$t('appTitle')}</h1>
+				<p class="mt-2 text-sm md:text-base text-gray-900">{$t('appDescription')}</p>
 			</div>
 
 			<LanguageSwitch />
