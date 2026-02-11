@@ -47,9 +47,9 @@ const translations: Translations = {
     en: 'Award Badge',
     ja: 'バッジ付与',
   },
-  relaySettings: {
-    en: 'Relay Settings',
-    ja: 'リレー設定',
+  settings: {
+    en: 'Settings',
+    ja: '設定',
   },
   
   // Badge Definition Form
@@ -110,20 +110,20 @@ const translations: Translations = {
     ja: 'バッジを更新',
   },
   editMode: {
-    en: 'Edit existing badge',
-    ja: '既存のバッジを編集',
+    en: 'Edit Mode',
+    ja: '編集',
   },
   createNewBadge: {
     en: 'Create new badge',
-    ja: '新しいバッジを作成',
+    ja: 'バッジを作成',
   },
   loadMyBadges: {
     en: 'Load My Badges',
-    ja: '自分のバッジを読み込む',
+    ja: 'バッジを読み込む',
   },
   selectBadgeToEdit: {
-    en: 'Select badge to edit',
-    ja: '編集するバッジを選択',
+    en: 'Select badge',
+    ja: 'バッジを選択',
   },
   
   // Badge Award Form

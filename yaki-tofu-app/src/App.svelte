@@ -75,7 +75,7 @@ onMount(() => {
 						: 'border-transparent hover:text-orange-500 hover:bg-gray-50'}"
 					onclick={() => activeTab = 'relay'}
 				>
-					{$t('relaySettings')}
+					{$t('settings')}
 				</button>
 			</div>
 		</div>
