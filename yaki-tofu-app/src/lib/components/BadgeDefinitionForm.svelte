@@ -4,6 +4,7 @@
   import { t } from '../stores/i18n';
   import { isValidBadgeId, isValidUrl } from '../utils/validation';
   import { publishEvent, getUserBadgeDefinitions } from '../services/nostr';
+  import { formatImageSize, type ImageSize } from '../utils/imageUtils';
   import ImagePreview from './ImagePreview.svelte';
   import type { NostrEvent } from '../../types/nostr';
   import type { Subscription } from 'rxjs';
@@ -27,6 +28,8 @@
   let description = $state('');
   let imageUrl = $state('');
   let thumbnailUrl = $state('');
+  let mainImageSize = $state<ImageSize | null>(null);
+  let thumbnailImageSize = $state<ImageSize | null>(null);
   let submitting = $state(false);
   let message = $state('');
   let messageType: 'success' | 'error' = $state('success');
@@ -162,11 +165,11 @@
         ['d', badgeId],
         ['name', badgeName],
         ['description', description],
-        ['image', imageUrl, '1024x1024'],
+        ['image', imageUrl, mainImageSize ? formatImageSize(mainImageSize) : '1024x1024'],
       ];
 
       if (thumbnailUrl) {
-        tags.push(['thumb', thumbnailUrl, '256x256']);
+        tags.push(['thumb', thumbnailUrl, thumbnailImageSize ? formatImageSize(thumbnailImageSize) : '256x256']);
       }
 
       const event: NostrEvent = {
@@ -310,7 +313,11 @@
     </div>
 
     {#if imageUrl && isValidUrl(imageUrl)}
-      <ImagePreview url={imageUrl} />
+      <ImagePreview url={imageUrl} onSizeLoaded={(size) => mainImageSize = size} />
+    {/if}
+
+    {#if thumbnailUrl && isValidUrl(thumbnailUrl)}
+      <ImagePreview url={thumbnailUrl} onSizeLoaded={(size) => thumbnailImageSize = size} />
     {/if}
 
     <button 

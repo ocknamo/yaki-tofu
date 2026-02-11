@@ -4,9 +4,10 @@
 
   interface Props {
     url: string;
+    onSizeLoaded?: (size: ImageSize | null) => void;
   }
 
-  let { url }: Props = $props();
+  let { url, onSizeLoaded }: Props = $props();
   let imageSize: ImageSize | null = $state(null);
   let loading = $state(false);
   let error = $state('');
@@ -17,6 +18,12 @@
     } else {
       imageSize = null;
       error = '';
+    }
+  });
+
+  $effect(() => {
+    if (onSizeLoaded) {
+      onSizeLoaded(imageSize);
     }
   });
 
