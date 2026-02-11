@@ -3,6 +3,8 @@
   import { t } from '../stores/i18n';
   import { isValidWebSocketUrl } from '../utils/validation';
 
+  import Delete from '../../assets/delete.svg'; 
+
   let newRelay = $state('');
   let error = $state('');
 
@@ -41,7 +43,7 @@
           onclick={() => handleRemoveRelay(relay)}
           class="px-3 py-1.5 bg-red-500 hover:bg-red-600 text-white text-sm rounded-md transition-colors whitespace-nowrap self-start sm:self-auto"
         >
-          {$t('remove')}
+          <img src={Delete} alt="Remove" class="w-4 inline-block to-white" />
         </button>
       </div>
     {/each}
@@ -61,7 +63,7 @@
         onclick={handleAddRelay}
         class="px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md transition-colors whitespace-nowrap"
       >
-        Add
+        +
       </button>
     </div>
     {#if error}
