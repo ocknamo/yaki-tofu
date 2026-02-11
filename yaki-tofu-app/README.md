@@ -1,10 +1,10 @@
-# Burning Tofu
+# Yakitofu
 
 NIP-58 Badge Creation & Award Application
 
 ## 概要
 
-Burning Tofuは、Nostrプロトコルの[NIP-58](https://github.com/nostr-protocol/nips/blob/master/58.md)に準拠したバッジ作成・付与アプリケーションです。
+Yakitofuは、Nostrプロトコルの[NIP-58](https://github.com/nostr-protocol/nips/blob/master/58.md)に準拠したバッジ作成・付与アプリケーションです。
 
 ## 機能
 

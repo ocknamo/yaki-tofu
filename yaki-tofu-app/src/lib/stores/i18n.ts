@@ -12,8 +12,8 @@ interface Translations {
 const translations: Translations = {
   // App
   appTitle: {
-    en: 'Burning Tofu',
-    ja: 'Burning Tofu',
+    en: 'Yakitofu',
+    ja: 'Yakitofu',
   },
   appDescription: {
     en: 'NIP-58 Badge Creation & Award Application',
